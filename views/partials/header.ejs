@@ -1,0 +1,23 @@
+<header class="header">
+     <a href="/" class="'header_logo">NodeJS</a>
+  <nav class="header__nav">
+    <ul>
+        <li>
+            <a href="/" class="<%= isActiveRoute('/', currentRoute)  %>">Home</a>
+        </li>
+        <li>
+            <a href="/about" class="<%= isActiveRoute('/about', currentRoute)  %>">About</a>
+        </li>
+        <li>
+            <a href="/contact" class="<%= isActiveRoute('/contact', currentRoute)  %>">Contact</a>
+        </li>
+    </ul>
+  </nav>
+
+  <div class="header_button">
+    <button class="searchBtn" aria-expanded="false">
+        Search <img src="data:image/png;base64,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" style="width:25px;height: 25px;">
+    </button>
+  </div>
+
+</header>
